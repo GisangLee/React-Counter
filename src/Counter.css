@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.counter {
+  margin: 10px 10px;
+  position: relative;
+  height: 50%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: teal;
+  border-radius: 30px;
+}
+
+.counter__column {
+  padding: 20px 0;
+}
+
+.counter__btn {
+  width: 20rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  width: 100%;
+  font-size: 30px;
+  padding: 10px;
+  margin: 0 10px;
+}
+
+span {
+  font-size: 50px;
+  font-family: "Jua", sans-serif;
+}
