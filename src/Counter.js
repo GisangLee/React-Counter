@@ -1,25 +1,25 @@
 import React from "react";
 import "./Counter.css";
 
+const count = document.querySelector("span");
+
 class Counter extends React.Component {
   state = {
     number: 0,
   };
+
+  addNumber = () => {
+    const { number } = this.state;
+    this.setState({ number: number + 1 });
+    console.log(number);
+  };
+
+  minusNumber = () => {
+    const { number } = this.state;
+    this.setState({ number: number - 1 });
+    console.log(number);
+  };
   render() {
-    const addBtn = document.querySelector(".counter__btn-add");
-    const minusBtn = document.querySelector(".counter__btn-minus");
-    const number = document.querySelector("span");
-
-    const addNumber = () => {
-      const { number } = this.state;
-      console.log(number);
-      this.setState({ number: number + 1 });
-    };
-
-    const minusNumber = () => {
-      console.log("Fuck");
-    };
-
     return (
       <div className="counter">
         <div className="counter__column">
@@ -29,10 +29,10 @@ class Counter extends React.Component {
         </div>
         <div className="counter__column">
           <div className="counter__btn">
-            <button className="counter__btn-add" onClick={addNumber}>
+            <button className="counter__btn-add" onClick={this.addNumber}>
               더하기
             </button>
-            <button className="counter__btn-minus" onClick={minusNumber}>
+            <button className="counter__btn-minus" onClick={this.minusNumber}>
               빼기
             </button>
           </div>
